@@ -6,6 +6,8 @@ import './styles/style.scss';
 const app = document.getElementById('root');
 
 readFile('../data/testdaten.txt').then((content) => {
+    // TODO: move to contacts component
+
     const contacts = content.split('\n\n').map(parseContact);
     console.debug(contacts);
 
@@ -14,9 +16,6 @@ readFile('../data/testdaten.txt').then((content) => {
         .map(loc => loc.getElement());
     const element = newNode({cssClasses: ['contacts']});
     locations.forEach(loc => element.appendChild(loc));
-
-    // const element = document.createElement('pre');
-    // element.appendChild(document.createTextNode(content));
 
     app.appendChild(element);
 });
