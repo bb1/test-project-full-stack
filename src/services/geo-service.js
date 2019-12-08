@@ -22,6 +22,7 @@ class GeoService {
             return `${c.zip} ${c.city}`
         })
         const distinctLocations = [...new Set(streetAndZip)];
+        console.info(`Requesting ${distinctLocations.length} unique locations for ${contacts.length} contacts`);
         const googleAddressInfos = Promise.all(
             distinctLocations.map(address => this.getState(address))
         ).then(states => {
