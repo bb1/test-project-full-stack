@@ -63,3 +63,5 @@ typings/
 .next
 
 dist/main.js
+
+src/google-api-key.js

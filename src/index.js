@@ -1,14 +1,18 @@
 import readFile from './utils/readFile';
 import Location from './location/location';
 import {newNode, newText} from './utils/dom-utils';
+import {geoService} from './services/geo-service';
 import './styles/style.scss';
 
 const app = document.getElementById('root');
 
+// TODO: move to own contacts component
 readFile('../data/testdaten.txt').then((content) => {
-    // TODO: move to contacts component
-
     const contacts = content.split('\n\n').map(parseContact);
+
+    return geoService.addState(contacts);
+}).then(contacts => {
+    
     console.debug(contacts);
 
     const locations = contacts
