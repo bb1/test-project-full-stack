@@ -1,5 +1,6 @@
 import readFile from './utils/readFile';
 import Location from './location/location';
+import {newNode, newText} from './utils/dom-utils';
 import './styles/style.scss';
 
 const app = document.getElementById('root');
@@ -8,8 +9,10 @@ readFile('../data/testdaten.txt').then((content) => {
     const contacts = content.split('\n\n').map(parseContact);
     console.debug(contacts);
 
-    const locations = contacts.map(contact => new Location(contact).getElement());
-    const element = newNode({cssClasses: ['locations']});
+    const locations = contacts
+        .map(contact => new Location(contact))
+        .map(loc => loc.getElement());
+    const element = newNode({cssClasses: ['contacts']});
     locations.forEach(loc => element.appendChild(loc));
 
     // const element = document.createElement('pre');

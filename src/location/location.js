@@ -29,7 +29,7 @@ export default class Location extends HtmlElement {
             node: 'p',
             childEl: newText(`${this.state}`)
         });
-        const contentEl = newNode();
+        const contentEl = newNode({});
         contentEl.appendChild(streetNode);
         contentEl.appendChild(cityNode);
         contentEl.appendChild(stateNode);

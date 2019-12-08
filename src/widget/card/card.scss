@@ -2,6 +2,8 @@
 
 .card {
     border-radius: 0.75rem;
+    border: 1px solid lightgrey;
+    margin-bottom: 2rem;
 
     .card-header {
         background: $highlightBg;
@@ -9,11 +11,17 @@
         color: $highlightColor;
         font-size: 1.2rem;
         border-bottom: 1px solid black;
+        padding: 0 0.5em;
+        border-radius: 0.75rem 0.75rem 0 0;
     }
     .card-content {
-
+        padding: 0 0.5em;
+        p {
+            margin: 0.25rem 0;
+        }
     }
     .card-footer {
+        padding: 0 0.5em;
         border-top: 1px solid black;
     }
 }
