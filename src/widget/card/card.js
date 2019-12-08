@@ -1,12 +1,9 @@
 import HtmlElement from '../../html-element';
-import newNode from '../../utils/dom-utils';
+import {newNode} from '../../utils/dom-utils';
 
 const CARD_CLASS_LIST = ["card-head", "card-content", "card-footer"];
 
 export default class Card extends HtmlElement {
-    headEl;
-    contentEl;
-    footerEl;
 
     constructor({headEl, contentEl, footerEl}) {
         super();

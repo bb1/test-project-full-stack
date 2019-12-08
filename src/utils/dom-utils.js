@@ -2,7 +2,7 @@ export function newText(string) {
     return document.createTextNode(string);
 }
 
-export function newNode({node = 'div', childEl, cssClasses = []}) {
+export function newNode({node = 'div', childEl = null, cssClasses = []}) {
     const div = document.createElement(node);
     if (childEl)
         div.appendChild(childEl);

@@ -3,13 +3,6 @@ import Card from '../widget/card/card';
 import {newText, newNode} from '../utils/dom-utils';
 
 export default class Location extends HtmlElement {
-    name;
-    lastName;
-    street;
-    streetNo;
-    zip;
-    city;
-    state;
 
     constructor({name, lastName, street, streetNo, zip, city, state}) {
         super();

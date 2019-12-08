@@ -1,14 +1,19 @@
 import readFile from './utils/readFile';
+import Location from './location/location';
 import './styles/style.scss';
 
 const app = document.getElementById('root');
 
 readFile('../data/testdaten.txt').then((content) => {
     const contacts = content.split('\n\n').map(parseContact);
-    console.log(contacts);
+    console.debug(contacts);
 
-    const element = document.createElement('pre');
-    element.appendChild(document.createTextNode(content));
+    const locations = contacts.map(contact => new Location(contact).getElement());
+    const element = newNode({cssClasses: ['locations']});
+    locations.forEach(loc => element.appendChild(loc));
+
+    // const element = document.createElement('pre');
+    // element.appendChild(document.createTextNode(content));
 
     app.appendChild(element);
 });
