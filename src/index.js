@@ -1,4 +1,5 @@
 import readFile from './utils/readFile';
+import './styles/style.scss';
 
 const app = document.getElementById('root');
 

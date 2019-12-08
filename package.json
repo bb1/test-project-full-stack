@@ -6,8 +6,26 @@
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
+    "@webpack-cli/init": "latest",
     "babel-loader": "^8.0.6",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6"
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "eslint": "latest",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "terser-webpack-plugin": "^2.2.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "workbox-webpack-plugin": "^4.3.1",
+    "css-loader": "^3.2.1"
+  },
+  "scripts": {
+    "build": "webpack --mode=production",
+    "start": "webpack-dev-server"
+  },
+  "description": "My webpack testprojekt project",
+  "dependencies": {
+    "style-loader": "^1.0.1"
   }
 }
