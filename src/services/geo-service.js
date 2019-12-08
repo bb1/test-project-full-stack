@@ -19,7 +19,7 @@ class GeoService {
 
     async addState(contacts = []) {
         const streetAndZip = contacts.map(c => {
-            return `${c.street} ${c.zip} ${c.city}`
+            return `${c.zip} ${c.city}`
         })
         const distinctLocations = [...new Set(streetAndZip)];
         const googleAddressInfos = Promise.all(
@@ -28,7 +28,7 @@ class GeoService {
             states.forEach((state, idx) => {
                 const source = distinctLocations[idx];
                 contacts
-                    .filter(c => `${c.street} ${c.zip} ${c.city}` === source)
+                    .filter(c => `${c.zip} ${c.city}` === source)
                     .forEach(c => c.state = state);
             });
             return contacts;
