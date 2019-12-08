@@ -1,0 +1,19 @@
+@import '../../styles/colors';
+
+.card {
+    border-radius: 0.75rem;
+
+    .card-header {
+        background: $highlightBg;
+        background: linear-gradient(to bottom, $highlightBg 0%,$highlightBgDarker 100%);
+        color: $highlightColor;
+        font-size: 1.2rem;
+        border-bottom: 1px solid black;
+    }
+    .card-content {
+
+    }
+    .card-footer {
+        border-top: 1px solid black;
+    }
+}
