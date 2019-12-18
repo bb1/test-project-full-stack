@@ -23,12 +23,9 @@ We wish you success!
 
 ## Installation
 
-1. `yarn install`
+1. `npm install`
 
 ## Run the tool
 
-1. `yarn webpack` (watcher)
-
-## Finish
-
-1. Please send your solution as a zip-file to "hiring-it@doctari.de".
+1. create a `google-api-key.js` with the following content: `export const GOOGLE_API_KEY = 'YOUR_API_KEY_HERE';`
+2. `npm start` (watcher)
